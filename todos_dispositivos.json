@@ -1,0 +1,17 @@
+[
+  {
+    "name": "Simpat UDM",
+    "ip": "192.168.100.3",
+    "status": "online"
+  },
+  {
+    "name": "UAP-AC-Pro Site",
+    "ip": "10.0.0.100",
+    "status": "online"
+  },
+  {
+    "name": "UAP-AC-Pro Azul",
+    "ip": "10.0.0.212",
+    "status": "online"
+  }
+]
