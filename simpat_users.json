@@ -1,0 +1,188 @@
+[
+    {
+      "id": "02",
+      "name": "Simpat Gustavo Cárdenas",
+      "ip_address": "10.0.0.2",
+      "is_admin": true
+    },
+    {
+      "id": "03",
+      "name": "Simpat Gilberto Campos",
+      "ip_address": "10.0.0.3",
+      "is_admin": true
+    },
+    {
+      "id": "04",
+      "name": "Simpat Carlos Retes",
+      "ip_address": "10.0.0.4",
+      "is_admin": false
+    },
+    {
+      "id": "05",
+      "name": "Simpat JC",
+      "ip_address": "10.0.0.5",
+      "is_admin": true
+    },
+    {
+      "id": "06",
+      "name": "Simpat Paola Sánchez",
+      "ip_address": "10.0.0.6",
+      "is_admin": true
+    },
+    {
+      "id": "07",
+      "name": "Simpat Aimé Trevino",
+      "ip_address": "10.0.0.7",
+      "is_admin": true
+    },
+    {
+      "id": "08",
+      "name": "Simpat Fernando Verdin",
+      "ip_address": "10.0.0.8",
+      "is_admin": false
+    },
+    {
+      "id": "09",
+      "name": "Simpat Daniel Diego",
+      "ip_address": "10.0.0.9",
+      "is_admin": false
+    },
+    {
+      "id": "10",
+      "name": "Simpat Miguel Beltran",
+      "ip_address": "10.0.0.10",
+      "is_admin": false
+    },
+    {
+      "id": "11",
+      "name": "Simpat Mauricio Galindo",
+      "ip_address": "10.0.0.11",
+      "is_admin": false
+    },
+    {
+      "id": "12",
+      "name": "Simpat Jesús Martínez",
+      "ip_address": "10.0.0.12",
+      "is_admin": false
+    },
+    {
+      "id": "13",
+      "name": "Simpat Jesús Martínez",
+      "ip_address": "10.0.0.13",
+      "is_admin": false
+    },
+    {
+      "id": "14",
+      "name": "Simpat Angel de Hoyos",
+      "ip_address": "10.0.0.14",
+      "is_admin": false
+    },
+    {
+      "id": "15",
+      "name": "Simpat Carlos Martinez",
+      "ip_address": "10.0.0.15",
+      "is_admin": false
+    },
+    {
+      "id": "16",
+      "name": "Simpat Rafael Ceballos",
+      "ip_address": "10.0.0.16",
+      "is_admin": false
+    },
+    {
+      "id": "17",
+      "name": "Simpat Elisa Avila",
+      "ip_address": "10.0.0.17",
+      "is_admin": false
+    },
+    {
+      "id": "18",
+      "name": "Simpat Ismael Estrada",
+      "ip_address": "10.0.0.18",
+      "is_admin": false
+    },
+    {
+      "id": "19",
+      "name": "Simpat Arturo Maldonado",
+      "ip_address": "10.0.0.19",
+      "is_admin": false
+    },
+    {
+      "id": "20",
+      "name": "Simpat Nora Esthela",
+      "ip_address": "10.0.0.20",
+      "is_admin": false
+    },
+    {
+      "id": "21",
+      "name": "Simpat Paola Sánchez",
+      "ip_address": "10.0.0.21",
+      "is_admin": true
+    },
+    {
+      "id": "22",
+      "name": "Simpat Abigail Garza",
+      "ip_address": "10.0.0.22",
+      "is_admin": false
+    },
+    {
+      "id": "23",
+      "name": "Simpat Abigail Vera",
+      "ip_address": "10.0.0.23",
+      "is_admin": false
+    },
+    {
+      "id": "24",
+      "name": "Simpat Laura Cantú",
+      "ip_address": "10.0.0.24",
+      "is_admin": false
+    },
+    {
+      "id": "25",
+      "name": "Simpat Oscar Omar",
+      "ip_address": "10.0.0.25",
+      "is_admin": false
+    },
+    {
+      "id": "26",
+      "name": "Simpat Zayra Aguilar",
+      "ip_address": "10.0.0.26",
+      "is_admin": false
+    },
+    {
+      "id": "27",
+      "name": "Simpat JC Rodriguez",
+      "ip_address": "10.0.0.27",
+      "is_admin": true
+    },
+    {
+      "id": "28",
+      "name": "Simpat Jesús Flores",
+      "ip_address": "10.0.0.28",
+      "is_admin": true
+    },
+    {
+      "id": "29",
+      "name": "Simpat Antonio Monge",
+      "ip_address": "10.0.0.29",
+      "is_admin": false
+    },
+    {
+      "id": "98",
+      "name": "Simpat Jeff",
+      "ip_address": "10.0.0.98",
+      "is_admin": false
+    },
+    {
+      "id": "99",
+      "name": "Simpat Ashish Patel",
+      "ip_address": "10.0.0.99",
+      "is_admin": true
+    },
+    {
+      "id": "200",
+      "name": "Simpat Presentaciones",
+      "ip_address": "10.0.0.200",
+      "is_admin": false
+    }
+  ]
