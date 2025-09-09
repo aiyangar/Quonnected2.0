@@ -1,188 +1,153 @@
-[
+{
+  "users": [
     {
-      "id": "02",
-      "name": "Simpat Gustavo Cárdenas",
-      "ip_address": "10.0.0.2",
-      "is_admin": true
+      "ip": "10.0.0.2",
+      "hostname": "Gustavo Cárdenas",
+      "userID": "U055JF3TRB8"
     },
     {
-      "id": "03",
-      "name": "Simpat Gilberto Campos",
-      "ip_address": "10.0.0.3",
-      "is_admin": true
+      "ip": "10.0.0.3",
+      "hostname": "Gilberto Campos",
+      "userID": "UG39E9SSV"
     },
     {
-      "id": "04",
-      "name": "Simpat Carlos Retes",
-      "ip_address": "10.0.0.4",
-      "is_admin": false
+      "ip": "10.0.0.4",
+      "hostname": "Carlos Retes",
+      "userID": "UGA1S9K0U"
     },
     {
-      "id": "05",
-      "name": "Simpat JC",
-      "ip_address": "10.0.0.5",
-      "is_admin": true
+      "ip": "10.0.0.5",
+      "hostname": "JC Rodríguez",
+      "userID": "UD5PTA57C"
     },
     {
-      "id": "06",
-      "name": "Simpat Paola Sánchez",
-      "ip_address": "10.0.0.6",
-      "is_admin": true
+      "ip": "10.0.0.6",
+      "hostname": "Paola Sánchez",
+      "userID": "U03HXLW5DBR"
     },
     {
-      "id": "07",
-      "name": "Simpat Aimé Trevino",
-      "ip_address": "10.0.0.7",
-      "is_admin": true
+      "ip": "10.0.0.7",
+      "hostname": "Aimé Treviño",
+      "userID": "U03A94L1UAD"
     },
     {
-      "id": "08",
-      "name": "Simpat Fernando Verdin",
-      "ip_address": "10.0.0.8",
-      "is_admin": false
+      "ip": "10.0.0.8",
+      "hostname": "Fernando Verdín",
+      "userID": "U04R495T9UG"
     },
     {
-      "id": "09",
-      "name": "Simpat Daniel Diego",
-      "ip_address": "10.0.0.9",
-      "is_admin": false
+      "ip": "10.0.0.9",
+      "hostname": "Daniel Diego",
+      "userID": "UCW5N1XRP"
     },
     {
-      "id": "10",
-      "name": "Simpat Miguel Beltran",
-      "ip_address": "10.0.0.10",
-      "is_admin": false
+      "ip": "10.0.0.10",
+      "hostname": "Miguel Beltrán",
+      "userID": "U97Q2HYKS"
     },
     {
-      "id": "11",
-      "name": "Simpat Mauricio Galindo",
-      "ip_address": "10.0.0.11",
-      "is_admin": false
+      "ip": "10.0.0.11",
+      "hostname": "Mauricio Galindo",
+      "userID": "U02E8R9TF5Z"
     },
     {
-      "id": "12",
-      "name": "Simpat Jesús Martínez",
-      "ip_address": "10.0.0.12",
-      "is_admin": false
+      "ip": "10.0.0.12",
+      "hostname": "Jesús Martínez",
+      "userID": "U01PQGAMGN6"
     },
     {
-      "id": "13",
-      "name": "Simpat Jesús Martínez",
-      "ip_address": "10.0.0.13",
-      "is_admin": false
+      "ip": "10.0.0.13",
+      "hostname": "Jesús Martínez",
+      "userID": "U01PQGAMGN6"
     },
     {
-      "id": "14",
-      "name": "Simpat Angel de Hoyos",
-      "ip_address": "10.0.0.14",
-      "is_admin": false
+      "ip": "10.0.0.14",
+      "hostname": "Angel de Hoyos",
+      "userID": "U02BZ2QC8KX"
     },
     {
-      "id": "15",
-      "name": "Simpat Carlos Martinez",
-      "ip_address": "10.0.0.15",
-      "is_admin": false
+      "ip": "10.0.0.15",
+      "hostname": "Carlos Martínez",
+      "userID": "UC0J0QYTE"
     },
     {
-      "id": "16",
-      "name": "Simpat Rafael Ceballos",
-      "ip_address": "10.0.0.16",
-      "is_admin": false
+      "ip": "10.0.0.16",
+      "hostname": "Rafael Ceballos",
+      "userID": "U020HV0SMU6"
     },
     {
-      "id": "17",
-      "name": "Simpat Elisa Avila",
-      "ip_address": "10.0.0.17",
-      "is_admin": false
+      "ip": "10.0.0.17",
+      "hostname": "Elisa Ávila",
+      "userID": "U02MA01FCE7"
     },
     {
-      "id": "18",
-      "name": "Simpat Ismael Estrada",
-      "ip_address": "10.0.0.18",
-      "is_admin": false
+      "ip": "10.0.0.18",
+      "hostname": "Ismael Estrada",
+      "userID": "U035JN5N1SM"
     },
     {
-      "id": "19",
-      "name": "Simpat Arturo Maldonado",
-      "ip_address": "10.0.0.19",
-      "is_admin": false
+      "ip": "10.0.0.19",
+      "hostname": "Arturo Maldonado",
+      "userID": "U02214PAV61"
     },
     {
-      "id": "20",
-      "name": "Simpat Nora Esthela",
-      "ip_address": "10.0.0.20",
-      "is_admin": false
+      "ip": "10.0.0.20",
+      "hostname": "Nora Luna",
+      "userID": "U07RE64MVCG"
     },
     {
-      "id": "21",
-      "name": "Simpat Paola Sánchez",
-      "ip_address": "10.0.0.21",
-      "is_admin": true
+      "ip": "10.0.0.21",
+      "hostname": "Paola Sánchez",
+      "userID": "U03HXLW5DBR"
     },
     {
-      "id": "22",
-      "name": "Simpat Abigail Garza",
-      "ip_address": "10.0.0.22",
-      "is_admin": false
+      "ip": "10.0.0.22",
+      "hostname": "Abigail Garza",
+      "userID": "U07APHFER7Z"
     },
     {
-      "id": "23",
-      "name": "Simpat Abigail Vera",
-      "ip_address": "10.0.0.23",
-      "is_admin": false
+      "ip": "10.0.0.23",
+      "hostname": "Abigail Vera",
+      "userID": "U05EN40QTLZ"
     },
     {
-      "id": "24",
-      "name": "Simpat Laura Cantú",
-      "ip_address": "10.0.0.24",
-      "is_admin": false
+      "ip": "10.0.0.24",
+      "hostname": "Laura Cantú",
+      "userID": "U02S24CPZ26"
+    },
+    
+
+
+    
+    {
+      "ip": "10.0.0.26",
+      "hostname": "Zayra Aguilar",
+      "userID": "U02PR7Y1TKN"
     },
     {
-      "id": "25",
-      "name": "Simpat Oscar Omar",
-      "ip_address": "10.0.0.25",
-      "is_admin": false
+      "ip": "10.0.0.27",
+      "hostname": "JC Rodríguez",
+      "userID": "UD5PTA57C"
     },
     {
-      "id": "26",
-      "name": "Simpat Zayra Aguilar",
-      "ip_address": "10.0.0.26",
-      "is_admin": false
+      "ip": "10.0.0.28",
+      "hostname": "Jesús Flores",
+      "userID": "U80Q35CPL"
     },
     {
-      "id": "27",
-      "name": "Simpat JC Rodriguez",
-      "ip_address": "10.0.0.27",
-      "is_admin": true
+      "ip": "10.0.0.29",
+      "hostname": "Antonio Monge",
+      "userID": "U0396GB5C3Y"
     },
     {
-      "id": "28",
-      "name": "Simpat Jesús Flores",
-      "ip_address": "10.0.0.28",
-      "is_admin": true
+      "ip": "10.0.0.98",
+      "hostname": "Jeff",
+      "userID": "U02MTBP4V2T"
     },
     {
-      "id": "29",
-      "name": "Simpat Antonio Monge",
-      "ip_address": "10.0.0.29",
-      "is_admin": false
-    },
-    {
-      "id": "98",
-      "name": "Simpat Jeff",
-      "ip_address": "10.0.0.98",
-      "is_admin": false
-    },
-    {
-      "id": "99",
-      "name": "Simpat Ashish Patel",
-      "ip_address": "10.0.0.99",
-      "is_admin": true
-    },
-    {
-      "id": "200",
-      "name": "Simpat Presentaciones",
-      "ip_address": "10.0.0.200",
-      "is_admin": false
-    }
+      "ip": "10.0.0.99",
+      "hostname": "Ashish Patel",
+      "userID": "U7ZQ3NSQ0"
+    }  
   ]
+}

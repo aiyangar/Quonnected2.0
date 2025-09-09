@@ -2,6 +2,7 @@ import requests
 import json
 import urllib3
 import os
+import re
 from dotenv import load_dotenv
 
 # Cargar variables de entorno
@@ -22,6 +23,80 @@ if UNIFI_URL and not UNIFI_URL.startswith(('http://', 'https://')):
 # Asegurar que tenga el puerto 8443 si no se especifica puerto
 if UNIFI_URL and ':8443' not in UNIFI_URL and ':443' not in UNIFI_URL and ':80' not in UNIFI_URL:
     UNIFI_URL = f'{UNIFI_URL}:8443'
+
+def extract_clients_from_html(html_content):
+    """
+    Extrae datos de clientes del HTML de la interfaz web de UniFi
+    """
+    clients = []
+    
+    try:
+        # Buscar patrones comunes de datos embebidos en HTML
+        patterns = [
+            # Buscar JSON embebido en scripts
+            r'window\.__INITIAL_STATE__\s*=\s*({.*?});',
+            r'window\.__DATA__\s*=\s*({.*?});',
+            r'var\s+clients\s*=\s*(\[.*?\]);',
+            r'clients:\s*(\[.*?\])',
+            # Buscar datos en atributos data-*
+            r'data-clients="([^"]*)"',
+            r'data-initial="([^"]*)"',
+        ]
+        
+        for pattern in patterns:
+            matches = re.findall(pattern, html_content, re.DOTALL | re.IGNORECASE)
+            for match in matches:
+                try:
+                    # Intentar decodificar si está en base64 o URL encoded
+                    if match.startswith('%7B') or match.startswith('%5B'):
+                        import urllib.parse
+                        match = urllib.parse.unquote(match)
+                    
+                    # Intentar parsear como JSON
+                    data = json.loads(match)
+                    
+                    # Buscar array de clientes en diferentes estructuras
+                    if isinstance(data, list):
+                        clients.extend(data)
+                    elif isinstance(data, dict):
+                        # Buscar en diferentes claves posibles
+                        for key in ['clients', 'data', 'items', 'devices', 'users']:
+                            if key in data and isinstance(data[key], list):
+                                clients.extend(data[key])
+                                break
+                        
+                        # Si no hay array, el dict mismo podría ser un cliente
+                        if not clients and 'id' in data or 'name' in data or 'ip' in data:
+                            clients.append(data)
+                    
+                    if clients:
+                        print(f"✅ Encontrados {len(clients)} clientes en HTML")
+                        return clients
+                        
+                except (json.JSONDecodeError, ValueError):
+                    continue
+        
+        # Si no se encontraron datos estructurados, buscar en tablas HTML
+        print("🔍 Buscando datos en tablas HTML...")
+        table_pattern = r'<tr[^>]*>.*?<td[^>]*>([^<]+)</td>.*?<td[^>]*>([^<]+)</td>.*?<td[^>]*>([^<]+)</td>.*?</tr>'
+        table_matches = re.findall(table_pattern, html_content, re.DOTALL | re.IGNORECASE)
+        
+        for match in table_matches:
+            if len(match) >= 3:
+                client = {
+                    'name': match[0].strip(),
+                    'ip': match[1].strip(),
+                    'status': match[2].strip()
+                }
+                clients.append(client)
+        
+        if clients:
+            print(f"✅ Encontrados {len(clients)} clientes en tablas HTML")
+        
+    except Exception as e:
+        print(f"❌ Error extrayendo datos del HTML: {e}")
+    
+    return clients
 
 def get_unifi_clients():
     """
@@ -63,18 +138,39 @@ def get_unifi_clients():
         login_response.raise_for_status() # Lanza un error si la solicitud no fue exitosa
         print("✅ Autenticación exitosa. Obteniendo clientes...")
 
-        # Paso 4: Obtener la lista de clientes conectados
-        clients_url = f'{UNIFI_URL}/api/s/default/stat/sta'
+        # Paso 4: Obtener clientes desde la interfaz web
+        print("🔍 Obteniendo clientes desde la interfaz web...")
+        clients_url = f'{UNIFI_URL}/network/default/clients/main'
         clients_response = session.get(clients_url, verify=False, timeout=10)
-        clients_response.raise_for_status()
         
-        clients_data = clients_response.json()
+        if clients_response.status_code != 200:
+            print(f"❌ Error al acceder a la interfaz: {clients_response.status_code}")
+            return
         
-        # Paso 4: Procesar y mostrar la información de los clientes
-        clients = clients_data.get('data', [])
+        print("✅ Interfaz web accesible")
+        
+        # Verificar si la respuesta es HTML o JSON
+        content_type = clients_response.headers.get('content-type', '').lower()
+        response_text = clients_response.text
+        
+        if 'application/json' in content_type:
+            # Es JSON, procesar normalmente
+            print("📄 Respuesta es JSON")
+            try:
+                clients_data = clients_response.json()
+                clients = clients_data.get('data', [])
+            except json.JSONDecodeError:
+                print("❌ Error al parsear JSON")
+                return
+        else:
+            # Es HTML, buscar datos embebidos
+            print("📄 Respuesta es HTML, buscando datos embebidos...")
+            clients = extract_clients_from_html(response_text)
         
         if not clients:
-            print("No se encontraron clientes conectados.")
+            print("⚠️ No se encontraron clientes")
+            print(f"📄 Primeros 500 caracteres de la respuesta:")
+            print(response_text[:500])
             return
 
         formatted_clients = []
